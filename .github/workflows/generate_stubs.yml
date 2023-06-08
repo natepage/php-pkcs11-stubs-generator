@@ -35,6 +35,8 @@ jobs:
             -   run: |
                     php repos/self/bin/generate-stubs.php
                     cd repos/php-pkcs11-ide-helper
+                    git config user.email "nathan.page@eonx.com"
+                    git config user.name "Nathan Page"
                     git add .
                     git commit -m "Update stubs"
                     git push
