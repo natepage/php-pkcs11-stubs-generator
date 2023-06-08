@@ -16,6 +16,12 @@ jobs:
 
             -   uses: ramsey/composer-install@v2
 
+            -   uses: actions/checkout@v3
+                with:
+                    repository: gamringer/php-pkcs11
+                    ref: master
+                    path: ext/php_pkcs11
+
             -   run: php bin/generate-stubs.php
                 shell: bash
 
