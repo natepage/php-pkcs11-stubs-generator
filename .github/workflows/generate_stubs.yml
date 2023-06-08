@@ -16,6 +16,8 @@ jobs:
 
             -   uses: ramsey/composer-install@v2
 
+            -   run: ls -la vendor
+
             -   uses: actions/checkout@v3
                 with:
                     repository: gamringer/php-pkcs11
