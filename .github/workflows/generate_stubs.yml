@@ -27,6 +27,7 @@ jobs:
                     php-version: 8.1
                     coverage: none
                     extensions: pkcs11
+                    working-directory: repos/self
 
             -   uses: ramsey/composer-install@v2
 
