@@ -7,17 +7,20 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             -   uses: actions/checkout@v3
+                with:
+                    path: repos/self
+
             -   uses: actions/checkout@v3
                 with:
                     repository: gamringer/php-pkcs11
                     ref: master
-                    path: ../repos/php-pkcs11
+                    path: repos/php-pkcs11
 
             -   uses: actions/checkout@v3
                 with:
                     repository: natepage/php-pkcs11-ide-helper
                     ref: main
-                    path: ../repos/php-pkcs11-ide-helper
+                    path: repos/php-pkcs11-ide-helper
 
             -   uses: shivammathur/setup-php@v2
                 with:
@@ -28,6 +31,6 @@ jobs:
             -   uses: ramsey/composer-install@v2
 
             -   run: |
-                    php bin/generate-stubs.php
-                    ls -la ../repos/php-pkcs11-ide-helper
+                    php repos/self/bin/generate-stubs.php
+                    ls -la repos/php-pkcs11-ide-helper
                 shell: bash
