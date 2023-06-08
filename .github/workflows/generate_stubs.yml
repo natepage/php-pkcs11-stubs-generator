@@ -16,9 +16,6 @@ jobs:
 
             -   uses: ramsey/composer-install@v2
 
-            -   run: ls -la vendor/composer
-            -   run: cat vendor/composer/autoload_classmap.php
-
             -   uses: actions/checkout@v3
                 with:
                     repository: gamringer/php-pkcs11
@@ -29,3 +26,4 @@ jobs:
                 shell: bash
 
             -   run: ls -la dist
+            -   run: ls -la dist/src

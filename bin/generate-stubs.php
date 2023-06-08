@@ -8,7 +8,7 @@ use NatePage\PhpPkcs11\StubsGenerator\GlobalConstantsGenerator;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-$distDir = __DIR__ . '/../dist';
+$distDir = __DIR__ . '/../dist/src';
 $extensionDir = __DIR__ . '/../ext/php_pkcs11';
 $classFinder = new ClassFinder();
 $classGenerator = new ClassGenerator();
