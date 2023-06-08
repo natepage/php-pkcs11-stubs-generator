@@ -37,7 +37,10 @@ jobs:
                     cd repos/php-pkcs11-ide-helper
                     git config user.email "nathan.page@eonx.com"
                     git config user.name "Nathan Page"
+                    git remote add upstream "https://natepage:${{ secrets.NATEPAGE_GITHUB_TOKEN }}@github.com/natepage/php-pkcs11-ide-helper.git"
                     git add .
                     git commit -m "Update stubs"
-                    git push
+                    git push upstream main
+                env:
+                    NATEPAGE_GITHUB_TOKEN: ${{ secrets.NATEPAGE_GITHUB_TOKEN }}
                 shell: bash
