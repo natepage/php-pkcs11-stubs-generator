@@ -15,6 +15,10 @@ final class PreviousStubsCleaner
 
     public function cleanUp(string $distDir): void
     {
+        if ($this->filesystem->exists($distDir) === false) {
+            return;
+        }
+
         $finder = (new Finder())
             ->in($distDir)
             ->files()
