@@ -33,6 +33,7 @@ jobs:
                     working-directory: repos/self
 
             -   run: |
+                    ls -la repos
                     php repos/self/bin/generate-stubs.php
                     ls -la repos/php-pkcs11-ide-helper
                 shell: bash
