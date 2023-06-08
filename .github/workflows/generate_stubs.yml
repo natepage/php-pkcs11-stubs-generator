@@ -27,9 +27,10 @@ jobs:
                     php-version: 8.1
                     coverage: none
                     extensions: pkcs11
-                    working-directory: repos/self
 
             -   uses: ramsey/composer-install@v2
+                with:
+                    working-directory: repos/self
 
             -   run: |
                     php repos/self/bin/generate-stubs.php
