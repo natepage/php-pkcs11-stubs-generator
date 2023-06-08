@@ -16,7 +16,7 @@ jobs:
 
             -   uses: ramsey/composer-install@v2
 
-            -   run: ls -la vendor/nette
+            -   run: ls -la vendor/composer
 
             -   uses: actions/checkout@v3
                 with:
