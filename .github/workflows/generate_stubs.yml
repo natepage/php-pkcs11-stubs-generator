@@ -33,7 +33,9 @@ jobs:
                     working-directory: repos/self
 
             -   run: |
-                    ls -la repos
                     php repos/self/bin/generate-stubs.php
-                    ls -la repos/php-pkcs11-ide-helper
+                    cd repos/php-pkcs11-ide-helper
+                    git add .
+                    git commit -m "Update stubs"
+                    git push
                 shell: bash
