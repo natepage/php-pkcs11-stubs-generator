@@ -35,7 +35,7 @@ jobs:
             -   run: php repos/self/bin/generate-stubs.php
                 shell: bash
 
-            -   uses: actions-js/push@v1
+            -   uses: actions-js/push@master
                 with:
                     author_email: "nathan.page@eonx.com"
                     author_name: "Nate Page"
