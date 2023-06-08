@@ -1,7 +1,7 @@
 {
   "name": "natepage/php-pkcs11-stubs-generator",
   "require-dev": {
-    "nette/php-generator": "^3.0",
+    "nette/php-generator": "^4.0",
     "symfony/filesystem": "^6.2",
     "symfony/finder": "^6.2",
     "symfony/string": "^6.2"
