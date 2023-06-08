@@ -17,6 +17,7 @@ jobs:
             -   uses: ramsey/composer-install@v2
 
             -   run: ls -la vendor/composer
+            -   run: cat vendor/composer/autoload_real.php
 
             -   uses: actions/checkout@v3
                 with:
