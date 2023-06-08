@@ -35,6 +35,9 @@ jobs:
             -   run: php repos/self/bin/generate-stubs.php
                 shell: bash
 
+            -   run: 'git config -l | grep ''http\..*\.extraheader'' | cut -d= -f1 | xargs -L1 git config --unset-all'
+                shell: bash
+
             -   uses: actions-js/push@master
                 with:
                     author_email: "nathan.page@eonx.com"
